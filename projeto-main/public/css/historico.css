@@ -1,0 +1,138 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+/* Títulos */
+h1 {
+    color: #343a40;
+    font-size: 32px;
+}
+
+/* Formulário */
+.form-group label {
+    font-size: 16px;
+    color: #495057;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #495057;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Botão */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #dee2e6;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mensagens de erro e sucesso */
+p {
+    text-align: center;
+    color: #343a40;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+p.error {
+    color: #e74c3c;
+}
+
+p.success {
+    color: #2ecc71;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    input[type="text"], button {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+}

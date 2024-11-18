@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definindo variáveis de cores */
+:root {
+  --cor-principal: #007BFF;
+  --cor-secundaria: #4CAF50;
+  --cor-accent: #f44336;
+  --cor-background: #f4f4f9;
+  --cor-texto: #333;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: var(--cor-texto);
+  background-color: var(--cor-background);
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container centralizado */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/* Cabeçalho */
+h1 {
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--cor-principal);
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Link para a página inicial */
+a.inicio {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a.inicio:hover {
+  background-color: #e2e2e2;
+  transform: translateY(-2px);
+}
+
+/* =========================== */
+/* TABELA */
+/* =========================== */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos das células da tabela */
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.1em;
+  color: var(--cor-texto);
+}
+
+/* Cabeçalho da tabela */
+th {
+  background-color: var(--cor-principal);
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Linhas alternadas com um toque de leveza */
+tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+/* Hover nas linhas da tabela */
+tr:hover {
+  background-color: #e1f5fe;
+}
+
+/* Links nas células */
+a.letra {
+  color: var(--cor-accent);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a.letra:hover {
+  color: #d32f2f;
+  background-color: #f8d7da;
+}
+
+/* Botão deletar */
+a[href*="deletar"] {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+a[href*="deletar"]:hover {
+  background-color: #a71d2a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  th, td {
+    padding: 10px 12px;
+  }
+
+  a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  /* Ajuste de padding nos links e botões para telas pequenas */
+  a.inicio, a {
+    padding: 8px 10px;
+  }
+}

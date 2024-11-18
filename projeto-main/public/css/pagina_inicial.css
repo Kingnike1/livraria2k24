@@ -1,0 +1,244 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cor */
+:root {
+    --cor-primaria: #007BFF;
+    --cor-secundaria: #0056b3;
+    --cor-fundo: #f5f5f5;
+    --cor-texto: #333;
+    --cor-texto-secundario: #555;
+    --cor-sucesso: #28a745;
+    --cor-danger: #dc3545;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: var(--cor-texto);
+    line-height: 1.6;
+    background: linear-gradient(180deg, rgba(255, 182, 193, 1) 0%, rgba(173, 216, 230, 1) 100%);
+    background-attachment: fixed;
+}
+
+/* Layout */
+.fundo {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    flex-direction: row; /* Manter a barra lateral ao lado do conteúdo principal */
+}
+
+/* Barra Lateral (Sidenav) */
+.sidenav {
+    width: 250px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px 0 0 10px;
+}
+
+.sidenav h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.sidenav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidenav a:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+/* Conteúdo Principal */
+main {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+header h1 {
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: var(--cor-primaria);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 5px;
+}
+
+/* Links de Cadastro e Listagem */
+a.letra {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+a.letra:hover {
+    background-color: var(--cor-secundaria);
+    transform: scale(1.05);
+}
+
+/* Botão de saída */
+a[href*="deslogar"] {
+    color: #fff;
+    background-color: var(--cor-danger);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+a[href*="deslogar"]:hover {
+    background-color: #a71d2a;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .fundo {
+        flex-direction: column; /* Barra lateral ocupa o topo em telas menores */
+    }
+
+    .sidenav {
+        width: 100%; /* Barra lateral ocupa a largura total */
+        box-shadow: none; /* Retira a sombra em telas menores */
+    }
+
+    main {
+        margin-top: 20px;
+    }
+
+    a.letra {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Ajuste do título em telas menores */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Tamanho do título de seção ajustado */
+    }
+}
+
+/* Estilos dos botões */
+.button {
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+  }
+  
+  /* .button::before {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #008080;
+    transition: all 0.3s ease;
+  }     */
+
+  
+  .button:hover::before {
+    left: 0;
+  }
+  
+  .button:hover {
+    color: #fff;
+  }
+  
+  .button a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button:hover a {
+    color: #fff;
+  }
+  
+  /* Efeitos de sombra e animação */
+  .button {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:hover {
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Seções e outros estilos */
+  main {
+    margin: 20px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  

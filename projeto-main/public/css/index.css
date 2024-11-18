@@ -1,0 +1,153 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Faz com que o body ocupe toda a altura da tela */
+  margin: 0; /* Remove margens padrão */
+  background-color: #121212; /* Cor de fundo */
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo principal do formulário */
+.form-container {
+  width: 500px; /* Aumente a largura para 500px */
+  border-radius: 0.75rem;
+  background-color: rgba(17, 24, 39, 1); /* Fundo escuro */
+  padding: 2.5rem; /* Aumente o padding para maior espaçamento interno */
+  color: rgba(243, 244, 246, 1); /* Texto claro */
+  margin: auto;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adicione sombra para destaque */
+}
+
+/* Título do formulário */
+.title {
+  text-align: center;
+  font-size: 2rem; /* Aumente o tamanho do título */
+  line-height: 2rem;
+  font-weight: 700;
+  color: rgba(243, 244, 246, 1);
+}
+
+/* Estilização do formulário */
+.form {
+  margin-top: 1.5rem;
+}
+
+/* Grupo de entrada (campo + label) */
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(156, 163, 175, 1); /* Cinza claro */
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(55, 65, 81, 1); /* Cinza escuro */
+  outline: 0;
+  background-color: rgba(17, 24, 39, 1); /* Fundo escuro */
+  padding: 1rem 1.25rem; /* Aumente o espaçamento interno dos campos */
+  color: rgba(243, 244, 246, 1); /* Texto claro */
+  font-size: 1rem; /* Aumente o tamanho da fonte dos inputs */
+}
+
+.input-group input:focus {
+  border-color: rgba(167, 139, 250, 1); /* Roxo claro ao focar */
+}
+
+/* Esqueceu a senha */
+.forgot {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1); /* Cinza claro */
+  margin: 8px 0 14px 0;
+}
+
+.forgot a, .signup a {
+  color: rgba(243, 244, 246, 1); /* Branco */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover, .signup a:hover {
+  text-decoration: underline rgba(167, 139, 250, 1); /* Sublinhar roxo claro ao passar o mouse */
+}
+
+/* Botão de login */
+.sign {
+  display: block;
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1); /* Roxo claro */
+  padding: 1rem; /* Aumente o botão de envio */
+  text-align: center;
+  color: rgba(17, 24, 39, 1); /* Texto escuro */
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 1.1rem; /* Aumente o texto do botão */
+}
+
+/* Mensagem de login social */
+.social-message {
+  display: flex;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.line {
+  height: 1px;
+  flex: 1 1 0%;
+  background-color: rgba(55, 65, 81, 1); /* Cinza escuro */
+}
+
+.social-message .message {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgba(156, 163, 175, 1); /* Cinza claro */
+}
+
+/* Ícones sociais */
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .icon {
+  border-radius: 0.125rem;
+  padding: 0.75rem;
+  border: none;
+  background-color: transparent;
+  margin-left: 8px;
+}
+
+.social-icons .icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #fff; /* Ícones brancos */
+}
+
+/* Mensagem de cadastro */
+.signup {
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1); /* Cinza claro */
+}
+
+.signup a {
+  color: rgba(243, 244, 246, 1); /* Branco */
+}
+
+.signup a:hover {
+  text-decoration: underline rgba(167, 139, 250, 1); /* Sublinhar roxo claro */
+}
