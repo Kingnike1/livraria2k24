@@ -2,12 +2,11 @@
 require_once "../controle/verificalogado.php";
 ?>  
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autor</title>
-    <!-- Link do Bootstrap (CDN) -->
+    <title>Lista de Autores - Sistema de Biblioteca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJRBCkT9q9zYq1zN4r5drKK9lfkVVVhxRZoOPjcjqwSoPQcklmPknDL3ESzM" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
@@ -41,14 +40,15 @@ require_once "../controle/verificalogado.php";
                     $id = $linha['idautor'];
                     $nome = $linha['nome'];
                     $nacionalidade = $linha['nacionalidade'];
-                    $nascimento = $linha['data_de_nascimento'];    
+                    $nascimento = date('d/m/Y', strtotime($linha['data_de_nascimento']));  // Formatação da data
 
                     echo "<tr>";
                     echo "<td>$id</td>";
                     echo "<td>$nome</td>";
                     echo "<td>$nacionalidade</td>";
                     echo "<td>$nascimento</td>";
-                    echo "<td><a href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc' class='btn btn-danger btn-sm'>Deletar</a></td>";
+                    // Botão de Deletar com confirmação
+                    echo "<td><a href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc' class='btn btn-danger btn-sm' onclick=\"return confirm('Tem certeza que deseja excluir este autor?')\">Deletar</a></td>";
                     echo "<td><a href='autor.php?id={$linha['idautor']}' class='btn btn-warning btn-sm'>Editar</a></td>";
                     echo "</tr>";
                 }
@@ -57,7 +57,6 @@ require_once "../controle/verificalogado.php";
         </table>
     </div>
 
-    <!-- Link do Bootstrap JS (CDN) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-TfX0JP2Uom6MIyZ4mGs2kjyR8RR5+9MwXwJXZ7hmltX5b4kb4D7TZB+5di9gU8Qm" crossorigin="anonymous"></script>
 </body>
 </html>

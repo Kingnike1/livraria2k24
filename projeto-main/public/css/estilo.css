@@ -12,6 +12,8 @@
   --cor-accent: #f44336;
   --cor-background: #f4f4f9;
   --cor-texto: #333;
+  --cor-texto-claro: #ffffff;
+  --cor-fundo-claro: #f1f1f1;
 }
 
 /* Corpo da página */
@@ -40,19 +42,20 @@ h1 {
   color: var(--cor-secundaria);
 }
 
-/* Links */
+/* Links principais */
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--cor-texto-claro);
   background-color: var(--cor-principal);
   padding: 10px 15px;
   border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 a:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Link para a página inicial */
@@ -63,14 +66,15 @@ a.inicio {
   color: var(--cor-secundaria);
   text-decoration: none;
   padding: 10px 15px;
-  background-color: #f1f1f1;
+  background-color: var(--cor-fundo-claro);
   border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 a.inicio:hover {
   background-color: #e2e2e2;
   transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* =========================== */
@@ -97,7 +101,7 @@ th, td {
 /* Cabeçalho da tabela */
 th {
   background-color: var(--cor-principal);
-  color: #fff;
+  color: var(--cor-texto-claro);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -135,14 +139,15 @@ a.letra:hover {
 /* Botão deletar */
 a[href*="deletar"] {
   background-color: #dc3545;
-  color: white;
+  color: var(--cor-texto-claro);
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 a[href*="deletar"]:hover {
   background-color: #a71d2a;
+  transform: translateY(-2px);
 }
 
 /* Responsividade */
@@ -167,5 +172,12 @@ a[href*="deletar"]:hover {
   /* Ajuste de padding nos links e botões para telas pequenas */
   a.inicio, a {
     padding: 8px 10px;
+  }
+
+  /* Tabela responsiva para telas pequenas */
+  table {
+    font-size: 0.85em;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 }

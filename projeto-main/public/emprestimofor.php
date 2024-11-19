@@ -44,6 +44,14 @@ if (isset($_GET['id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Incluindo o Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.14/dist/sweetalert2.min.css">
     <!-- Estilos adicionais -->
     <style>
         body {
@@ -88,7 +96,7 @@ if (isset($_GET['id'])) {
     </style>
 </head>
 <body>
-    <div class="container mt-4">
+    <div class="container mt-4 animate__animated animate__fadeIn">
         <a href="home.php" class="btn-back"><i class="fas fa-home"></i> Página inicial</a>
         
         <h1><?php echo ($id > 0) ? "Editar" : "Cadastrar"; ?> Empréstimo</h1>
@@ -107,7 +115,7 @@ if (isset($_GET['id'])) {
             <!-- Campo de funcionário -->
             <div class="form-group mb-3">
                 <label for="funcionario">Funcionário:</label>
-                <select id="funcionario" name="funcionario" class="form-select" required>
+                <select id="funcionario" name="funcionario" class="form-select select2" required>
                     <?php
                         // Consulta para buscar os funcionários
                         $sql = "SELECT idfuncionario, nome FROM funcionario";
@@ -126,7 +134,7 @@ if (isset($_GET['id'])) {
             <!-- Campo de cliente -->
             <div class="form-group mb-3">
                 <label for="cliente">Cliente:</label>
-                <select id="cliente" name="cliente" class="form-select" required>
+                <select id="cliente" name="cliente" class="form-select select2" required>
                     <?php
                         // Consulta para buscar os clientes
                         $sql = "SELECT idcliente, nome FROM cliente";
@@ -145,7 +153,7 @@ if (isset($_GET['id'])) {
             <!-- Campo de livro -->
             <div class="form-group mb-3">
                 <label for="livro">Livro:</label>
-                <select id="livro" name="livro" class="form-select" required>
+                <select id="livro" name="livro" class="form-select select2" required>
                     <?php
                         // Consulta para buscar os livros
                         $sql = "SELECT idlivro, titulo FROM livro";
@@ -168,7 +176,27 @@ if (isset($_GET['id'])) {
         </form>
     </div>
 
-    <!-- Scripts do Bootstrap e Font Awesome -->
+    <!-- Scripts do Bootstrap, Font Awesome, Select2, e SweetAlert2 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.14/dist/sweetalert2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Inicializando o Select2
+            $('.select2').select2();
+
+            // Exemplo de SweetAlert2 (pode ser modificado conforme necessidade)
+            <?php if ($botao == "Salvar") { ?>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Empréstimo salvo com sucesso!',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            <?php } ?>
+        });
+    </script>
 </body>
 </html>

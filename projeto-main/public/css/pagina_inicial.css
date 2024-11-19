@@ -57,6 +57,7 @@ body {
     text-align: center;
 }
 
+/* Estilo dos links da barra lateral */
 .sidenav a {
     display: block;
     color: #fff;
@@ -80,6 +81,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
+    margin-left: 270px; /* Ajuste da margem para dar espaço à barra lateral */
 }
 
 header h1 {
@@ -175,7 +177,6 @@ a[href*="deslogar"]:hover {
     border-radius: 10px;
     cursor: pointer;
     position: relative;
-    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,60 +186,48 @@ a[href*="deslogar"]:hover {
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     margin: 10px;
-  }
-  
-  /* .button::before {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: #008080;
-    transition: all 0.3s ease;
-  }     */
+}
 
-  
-  .button:hover::before {
+.button:hover::before {
     left: 0;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     color: #fff;
-  }
-  
-  .button a {
+}
+
+.button a {
     text-decoration: none;
     color: inherit;
     font-size: 1.1rem;
     font-weight: 600;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .button:hover a {
+}
+
+.button:hover a {
     color: #fff;
-  }
-  
-  /* Efeitos de sombra e animação */
-  .button {
+}
+
+/* Efeitos de sombra e animação */
+.button {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Seções e outros estilos */
-  main {
+}
+
+/* Seções e outros estilos */
+main {
     margin: 20px;
-  }
-  
-  section {
+}
+
+section {
     margin-bottom: 30px;
-  }
-  
-  h2 {
+}
+
+h2 {
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 600;
-  }
-  
+}
