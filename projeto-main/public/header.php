@@ -19,6 +19,9 @@
     
     <!-- Link para o Chart.js (Gráficos) -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     
     <!-- CSS personalizado -->
     <link rel="stylesheet" href="./css/pagina_inicial.css">
