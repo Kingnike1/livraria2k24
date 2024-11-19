@@ -16,7 +16,6 @@ require_once "../controle/verificalogado.php";
         <h1 class="text-center text-primary my-4">Lista de Autor</h1>
         <div class="mb-3">
             <a href="home.php" class="btn btn-secondary">Página Inicial</a>
-            <a href="../controle/pesquisarautor.php" class="btn btn-info">Pesquisar</a>
         </div>
         <table class="table table-bordered table-striped table-hover">
             <thead>
