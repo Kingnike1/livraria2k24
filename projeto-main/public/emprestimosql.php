@@ -18,10 +18,9 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
 <body>
     <div class="container my-4">
         <h1 class="text-center text-primary mb-4">Lista de Empréstimos</h1>
-        
+
         <div class="mb-3">
             <a href="home.php" class="btn btn-secondary">Página Inicial</a>
-            <a href="../controle/pesquisaremprestimo.php" class="btn btn-info">Pesquisar</a>
         </div>
 
         <table class="table table-bordered table-striped table-hover">
@@ -30,9 +29,9 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                     <th>ID Empréstimo</th>
                     <th>Devolução</th>
                     <th>Dia do Empréstimo</th>
-                    <th>Funcionário ID</th>
-                    <th>Cliente ID</th>
-                    <th>Livro ID</th>
+                    <th>Funcionário</th>
+                    <th>Cliente</th>
+                    <th>Livro</th>
                     <th colspan="2">Ações</th>
                 </tr>
             </thead>
@@ -43,7 +42,22 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                 $loc = 'emprestimosql.php';
 
                 // Consulta SQL para obter os empréstimos
-                $sql = "SELECT * FROM emprestimo";
+                $sql = "SELECT 
+                            emprestimo.idemprestimo,
+                            emprestimo.devolucao,
+                            emprestimo.dia_do_emprestimo,
+                            funcionario.nome AS funcionario_nome,
+                            cliente.nome AS cliente_nome,
+                            livro.titulo AS livro_titulo
+                        FROM 
+                            emprestimo
+                        JOIN 
+                            funcionario ON emprestimo.funcionario_idfuncionario = funcionario.idfuncionario
+                        JOIN 
+                            cliente ON emprestimo.cliente_idcliente = cliente.idcliente
+                        JOIN 
+                            livro ON emprestimo.livro_idlivro = livro.idlivro;
+                        ";
                 $resultados = mysqli_query($conexao, $sql);
 
                 // Loop pelos resultados e geração das linhas da tabela
@@ -51,10 +65,10 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                     $id = $linha['idemprestimo'];
                     $devolucao = $linha['devolucao'];
                     $dia_do_emprestimo = $linha['dia_do_emprestimo'];
-                    $funcionario = $linha['funcionario_idfuncionario'];
-                    $cliente = $linha["cliente_idcliente"];
-                    $livro = $linha["livro_idlivro"];
-
+                    $funcionario = $linha['funcionario_nome']; // Nome do funcionário
+                    $cliente = $linha["cliente_nome"]; // Nome do cliente
+                    $livro = $linha["livro_titulo"]; // Título do livro
+                
                     echo "<tr>";
                     echo "<td>{$id}</td>";
                     echo "<td>{$devolucao}</td>";
@@ -69,7 +83,7 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                             <a href='emprestimofor.php?id={$linha['idemprestimo']}' class='btn btn-warning btn-sm'>Editar</a>
                         </td>";
                     echo "</tr>";
-                }
+                }                
                 ?>
             </tbody>
         </table>

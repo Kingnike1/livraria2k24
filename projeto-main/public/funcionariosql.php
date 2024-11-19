@@ -21,7 +21,6 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
 
         <div class="mb-3">
             <a href="home.php" class="btn btn-secondary">Página Inicial</a>
-            <a href="../controle/pesquisarfuncionario.php" class="btn btn-info">Pesquisar</a>
         </div>
 
         <table class="table table-bordered table-striped table-hover">
@@ -33,7 +32,7 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                     <th>Salário</th>
                     <th>Data de Nascimento</th>
                     <th>Telefone</th>
-                    <th>Ações</th>
+                    <th colspan="2">Ações</th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +64,9 @@ require_once "../controle/conexao.php"; // Conexão com o banco de dados
                     echo "<td>
                             <a href='../controle/deletar.php?id={$id}&campo={$campo}&tabela={$tabela}&loc={$loc}' class='btn btn-danger btn-sm'>Deletar</a>
                         </td>";
+                        echo "<td>
+                        <a href='funcionario.php?id={$linha['idfuncionario']}' class='btn btn-warning btn-sm'>Editar</a>
+                    </td>";
                     echo "</tr>";
                 }
                 ?>

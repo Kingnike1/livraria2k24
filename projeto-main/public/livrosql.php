@@ -13,12 +13,11 @@
 <body>
     <div class="container my-4">
         <h1 class="text-center text-primary mb-4">Lista de Livros</h1>
-        
+
         <div class="mb-3">
             <a href="home.php" class="btn btn-secondary">Página Inicial</a>
-            <a href="../controle/pesquisarlivro.php" class="btn btn-info">Pesquisar</a>
         </div>
-        
+
         <table class="table table-bordered table-striped table-hover">
             <thead class="thead-dark">
                 <tr>
@@ -41,35 +40,44 @@
                 $loc = 'livrosql.php';
 
                 // Consulta SQL para obter os livros
-                $sql = "SELECT * FROM livro";
+                $sql = "SELECT 
+                            livro.idlivro, livro.titulo, livro.genero, livro.idioma, livro.data_de_publicacao, livro.disponivel, 
+                            editora.nome AS editora_nome, 
+                            autor.nome AS autor_nome
+                        FROM livro
+                        JOIN editora ON livro.editora_ideditora = editora.ideditora
+                        JOIN autor ON livro.autor_idautor = autor.idautor";
+
                 $resultados = mysqli_query($conexao, $sql);
 
                 while ($linha = mysqli_fetch_array($resultados)) {
-                    $id = $linha['idlivro'];
-                    $genero = $linha['genero'];
+                    $idlivro = $linha['idlivro'];
                     $titulo = $linha['titulo'];
-                    $disponivel = $linha['disponivel'];
+                    $genero = $linha['genero'];
                     $idioma = $linha['idioma'];
-                    $data_publi = $linha['data_de_publicacao'];
-                    $idautor = $linha['autor_idautor'];
-                    $ideditora = $linha['editora_ideditora'];
-                    
-                    // Verifica se o livro está disponível
-                    $dis = ($disponivel == 1) ? 'Sim' : 'Não';
+                    $data_publicacao = $linha['data_de_publicacao'];
+                    $disponivel = $linha['disponivel'];
+                    $editora_nome = $linha['editora_nome']; // Nome da editora
+                    $autor_nome = $linha['autor_nome']; // Nome do autor
 
                     echo "<tr>";
-                    echo "<td>{$id}</td>";
-                    echo "<td>{$genero}</td>";
+                    echo "<td>{$idlivro}</td>";
                     echo "<td>{$titulo}</td>";
-                    echo "<td>{$dis}</td>";
+                    echo "<td>{$genero}</td>";
                     echo "<td>{$idioma}</td>";
-                    echo "<td>{$data_publi}</td>";
-                    echo "<td>{$idautor}</td>";
-                    echo "<td>{$ideditora}</td>";
-                    echo "<td><a href='../controle/deletar.php?id={$id}&campo={$campo}&tabela={$tabela}&loc={$loc}' class='btn btn-danger btn-sm'>Deletar</a></td>";
-                    echo "<td><a href='livrosfor.php?id={$linha['idlivro']}' class='btn btn-warning btn-sm'>Editar</a></td>";
+                    echo "<td>{$data_publicacao}</td>";
+                    echo "<td>{$disponivel}</td>";
+                    echo "<td>{$editora_nome}</td>";
+                    echo "<td>{$autor_nome}</td>";
+                    echo "<td>
+             <a href='../controle/deletar.php?id={$idlivro}&campo={$campo}&tabela={$tabela}&loc={$loc}' class='btn btn-danger btn-sm'>Deletar</a>
+         </td>";
+                    echo "<td>
+             <a href='livrosfor.php?id={$linha['idlivro']}' class='btn btn-warning btn-sm'>Editar</a>
+         </td>";
                     echo "</tr>";
                 }
+
                 ?>
             </tbody>
         </table>

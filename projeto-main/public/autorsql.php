@@ -50,7 +50,7 @@ require_once "../controle/verificalogado.php";
                     echo "<td>$nacionalidade</td>";
                     echo "<td>$nascimento</td>";
                     echo "<td><a href='../controle/deletar.php?id=$id&campo=$campo&tabela=$tabela&loc=$loc' class='btn btn-danger btn-sm'>Deletar</a></td>";
-                    echo "<td><a href='cliente.php?id={$linha['idautor']}' class='btn btn-warning btn-sm'>Editar</a></td>";
+                    echo "<td><a href='autor.php?id={$linha['idautor']}' class='btn btn-warning btn-sm'>Editar</a></td>";
                     echo "</tr>";
                 }
                 ?>

@@ -1,22 +1,25 @@
 <?php
+require_once "./conexao.php";
+
+$idemprestimo = $_POST['idemprestimo'];
 $Data_Devol = $_POST['Data_Devol'];
 $funcionario = $_POST['funcionario'];
 $cliente = $_POST['cliente'];
 $livro = $_POST['livro'];
-// echo 'Data do empréstimo: ' . $data_de_emprestimo;
-// echo "<br>";
-// echo 'Data de devolução: ' . $data_de_devolucao;
-// echo "<br>";
-// echo 'Juros do empréstimo' . $juros_de_emprestimo;
 
-
-
-// mudei o  texte para date no Data_Devol 
-
-require_once "./conexao.php";
-
-$sql = "INSERT INTO emprestimo (devolucao,funcionario_idfuncionario,cliente_idcliente,livro_idlivro) 
-VALUES ('$Data_Devol','$funcionario','$cliente','$livro')";
+if ($idemprestimo == 0) {
+    // Inserir novo empréstimo
+    $sql = "INSERT INTO emprestimo (devolucao, funcionario_idfuncionario, cliente_idcliente, livro_idlivro) 
+            VALUES ('$Data_Devol', '$funcionario', '$cliente', '$livro')";
+} else {
+    // Atualizar empréstimo existente
+    $sql = "UPDATE emprestimo 
+            SET devolucao = '$Data_Devol', 
+                funcionario_idfuncionario = '$funcionario', 
+                cliente_idcliente = '$cliente', 
+                livro_idlivro = '$livro' 
+            WHERE idemprestimo = $idemprestimo";
+}
 
 mysqli_query($conexao, $sql);
 
