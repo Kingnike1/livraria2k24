@@ -1,7 +1,7 @@
 <?php
-        $nome = $_GET['nome'];
-        $nacionalidade = $_GET['nacionalidade'];
-        $data_de_nascimento = $_GET['data_de_nascimento'];
+        $nome = $_POST['nome'];
+        $nacionalidade = $_POST['nacionalidade'];
+        $data_de_nascimento = $_POST['data_de_nascimento'];
 
         require_once "./conexao.php";
 

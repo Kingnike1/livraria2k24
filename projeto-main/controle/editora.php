@@ -1,6 +1,6 @@
 <?php
-$nome_ed = $_GET['nome_ed'];
-$loc_ed = $_GET['loc_ed'];
+$nome_ed = $_POST['nome_ed'];
+$loc_ed = $_POST['loc_ed'];
 
 require_once "./conexao.php";
 

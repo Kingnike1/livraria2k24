@@ -1,11 +1,11 @@
 <?php
-        $genero = $_GET['genero'];
-        $titulo = $_GET['titulo'];
-        $idioma = $_GET['idioma'];
-        $editora = $_GET['editora'];
-        $autor = $_GET['autor'];
-        $data_pu = $_GET['data_pu'];
-        $disponivel = $_GET['disponivel'];
+        $genero = $_POST['genero'];
+        $titulo = $_POST['titulo'];
+        $idioma = $_POST['idioma'];
+        $editora = $_POST['editora'];
+        $autor = $_POST['autor'];
+        $data_pu = $_POST['data_pu'];
+        $disponivel = $_POST['disponivel'];
         
       require_once "./conexao.php";
 

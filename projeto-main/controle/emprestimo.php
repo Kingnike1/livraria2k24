@@ -1,8 +1,8 @@
 <?php
-$Data_Devol = $_GET['Data_Devol'];
-$funcionario = $_GET['funcionario'];
-$cliente = $_GET['cliente'];
-$livro = $_GET['livro'];
+$Data_Devol = $_POST['Data_Devol'];
+$funcionario = $_POST['funcionario'];
+$cliente = $_POST['cliente'];
+$livro = $_POST['livro'];
 // echo 'Data do empréstimo: ' . $data_de_emprestimo;
 // echo "<br>";
 // echo 'Data de devolução: ' . $data_de_devolucao;

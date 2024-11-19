@@ -1,9 +1,9 @@
 <?php
-$nome_f = $_GET['nome_f'];
-$data_nf = $_GET['data_nf'];
-$cpf_f = $_GET['cpf_f'];
-$tele_f = $_GET['tele_f'];
-$salario = $_GET['salario'];
+$nome_f = $_POST['nome'];
+$data_nf = $_POST['data_de_nascimento'];
+$cpf_f = $_POST['cpf'];
+$tele_f = $_POST['telefone'];
+$salario = $_POST['salario'];
 
 require_once "./conexao.php";
 

@@ -91,7 +91,7 @@ if (isset($_GET['id'])) {
         <h1><?php echo ($id > 0) ? "Editar" : "Cadastrar"; ?> Funcionário</h1>
 
         <!-- Formulário de cadastro/edição de funcionário -->
-        <form action="../controle/salvarfuncionario.php" method="POST">
+        <form action="../controle/funcionario.php" method="POST">
             <fieldset>
                 <legend>Dados do Funcionário</legend>
 
