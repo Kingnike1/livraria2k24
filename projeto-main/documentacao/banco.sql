@@ -166,406 +166,81 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
-use mydb;
-INSERT INTO `mydb`.`avaliacao_funcionario` 
-(`funcionario_idfuncionario`, `cliente_idcliente`, `avaliacao`) 
-VALUES 
-(1, 2, 4.50),
-(1, 3, 3.80),
-(1, 4, 4.10),
-(2, 1, 5.00),
-(2, 3, 4.00),
-(2, 5, 4.60),
-(3, 2, 3.90),
-(3, 4, 4.30),
-(4, 1, 5.00),
-(4, 5, 4.20);
 
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("123.456.789-00", "(62) 98419-0231", "Julia", 20080601);
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("987.654.321-01", "(11) 98765-4321", "Felipe", 20080602);
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("456.789.123-02", "(21) 99876-5432", "Atamara", "20080603");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("321.654.987-03", "(31) 98765-6543", "Ana Silva", "20080604");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("789.123.456-04", "(41) 99876-7654", "Pedro Santos", "20080605");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("234.567.890-059", "(51) 98765-8765", "Maria Oliveira", "20080606");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("890.123.456-06", "(61) 99876-9876", "João Souza", "20080607");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("567.890.123-07", "(71) 98765-0987", "Carla Martins", "20080608");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("345.678.901-08", "(81) 99876-12341", "Lucas Pereira", "20080609");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("901.234.567-09", "(91) 98765-2345", "Fernanda Costa", "20080610");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("678.901.234-10", "(12) 99876-34561", "Rafael Ferreira", "20080611");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("432.109.876-11", "(22) 98765-4567", "Juliana Almeida", "20080612");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("210.987.654-12", "(32) 99876-5678", "Marcos Rodrigues", "20080613");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("876.543.210-13", "(42) 98765-6789", "Camila Cardoso", "20080614");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("543.210.987-14", "(52) 99876-7890", "Bruno Gonçalves", "20080615");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("765.432.109-15", "(62) 98765-8901", "Mariana Ramos", "20080616");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("987.654.321-160", "(72) 99876-9012", "André Lima", "20080617");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("234.567.890-17", "(82) 98765-0123", "Laura Carvalho", "20080618");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("890.123.456-18", "(92) 99876-1234", "Tiago Gomes", "20080619");
-
-INSERT INTO cliente (cpf, telefone, nome, data_de_nascimento) 
-VALUES ("345.678.901-19", "(13) 98765-2345", "Renata Barbosa", "20080620");
-
-
-
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Bruno Santos", "123.456.789-01", 1412, "20000620","(13) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Clara Oliveira", "123.456.789-02", 1412, "20010620","(23) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Daniel Costa", "123.456.789-03", 1412, "20020620","(33) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Elisa Pereira", "123.456.789-04", 1412, "20030620","(43) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Felipe Rodrigues", "123.456.789-05", 1412, "20040620","(53) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Gabriela Almeida", "123.456.789-06", 1412, "20050620","(63) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Henrique Lima", "123.456.789-07", 1412, "20060620","(73) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Isabela Cardoso", "123.456.789-08", 1412, "20070620","(83) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("João Carvalho", "123.456.789-09", 1412, "20080620","(93) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Laura Sousa", "123.456.789-10", 1412, "20090620","(103) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Mateus Fernandes", "123.456.789-11", 1412, "20100620","(113) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Natália Gomes", "123.456.789-12", 1412, "20110620","(123) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Otávio Miranda", "123.456.789-13", 1412, "20120620","(133) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Paula Barbosa", "123.456.789-14", 1412, "20130620","(143) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Rafael Martins", "123.456.789-15", 1412, "20140620","(153) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Sofia Ribeiro", "123.456.789-16", 1412, "20150620","(163) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Thiago Gonçalvess", "123.456.789-17", 1412, "20160620","(173) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Valentina Santos", "123.456.789-18", 1412, "20170620","(183) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("William Oliveira", "123.456.789-19", 1412, "20180620","(193) 88765-2345");
-
-INSERT INTO funcionario (nome, cpf, salario, data_de_nascimento,telefone) 
-VALUES ("Yasmin Ribeiro", "123.456.789-20", 1412, "20190620","(203) 88765-2345");
-
-
-
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Editora Sentimentos", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Misteriosos Editores", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Love Stories Publishing", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Storia Antica", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Future Fiction", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Al-Mutanabbi Publishing", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Philosophische Verlag", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Manga Publishing Co ", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Libros para el Alma", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Enchanted Tales", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Noir Editore", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Imperial Romance Press", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Editora Reflexão", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Spannende Geschichten", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Épica Edições", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Spannende Edições", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Épica Edições R.", "Russia");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Noir Edições", "Brazil");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Noir Edições Ca.", "Canadá");
-
-INSERT INTO editora (nome,localidade) 
-VALUES ("Noir Edições Cr.", "Catar");
-
-
-
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Gabriel García Márquez", "Colombiano","20000102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Haruki Murakami", "Japonês","20010102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Jane Austen", "Britânica","20020102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Franz Kafka", "Checo","20030102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("J.K. Rowling", "Britânica","20040102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Leo Tolstoy", "Russo","20050102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Paulo Coelho", "Brasileiro","20060102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Ernest Hemi","fdgvsdfs","20060102");
-
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Chimamanda Ngozi Adichie", "Nigeriana","20080102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES("Isabel Allende", "Chilena","20090102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Yukio Mishima", "Japonês","20100102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Albert Camus", "Francês","20110102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Toni Morrison", "Americana","20120102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Milan Kundera", "Checo","20130102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Mario Vargas Llosa", "Peruano","20140102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Elena Ferrante", "Italiana","20150102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Virginia Woolf", "Britânica","20160102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Salman Rushdie", "Britânico","20170102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Orhan Pamuk", "Turco","20180102");
-
-INSERT INTO autor (nome,nacionalidade,data_de_nascimento) 
-VALUES ("Murilo Rubião", "Brasileiro","20190102");
-
-
-
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Realismo Mágico"," Cem Anos de Solidão",1,"Italiano",20010922,1,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Norwegian Wood", "Ficção Contemporânea",1,"Inglês",20020922,17,20);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Orgulho e Preconceito", "Romance Clássico",1,"Português",20030922,15,17);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("A Metamorfose", "Ficção Absurda",1,"Inglês",20040922,12,4);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Harry Potter e a Pedra Filosofal", "Fantasia",1,"Italiano",20050922,10,15);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Guerra e Paz", "Romance Histórico",1,"Português",20060922,8,8);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("O Alquimista", "Ficção Espiritual",1,"Inglês",20070922,4,19);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("O Velho e o Mar", "Novela",1,"Português",20080922,5,16);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Americanah", "Ficção Contemporânea",1,"Turco",20090922,11,7);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("A Casa dos Espíritos", "Realismo Fantástico",1,"Português",20100922,14,18);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("O Maravilhoso País de Oz", "Literatura Infantil",1,"Inglês",20110922,1,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("O Estrangeiro", "Ficção Existencialista",1,"Inglês",20120922,18,20);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Amada", "Romance Afro-Americano",1,"Turco",20130922,9,1);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("A Insustentável Leveza do Ser", "Romance Filosófico",1,"Inglês",20140922,6,18);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("A Invenção de Morel", "Ficção Científica",1,"Italiano",20150922,9,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("Mrs. Dalloway", "Romance Afro-Americano",1,"Italiano",20160922,2,9);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("logo mal", "Realismo Fantástico",1,"Inglês",20170922,2,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("os tres porquinhos", "Sátira Fantástica",1,"Italiano",20170922,2,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("logo bom", "Romance Afro-Americano",1,"Português",20170922,2,2);
-
-INSERT INTO livro (genero,titulo,disponivel,idioma,data_de_publicacao,autor_idautor,editora_ideditora) 
-VALUES ("os dois porquinhos", "Sátira Fantástica",1,"Italiano",20170922,2,2);
-
-
-
-
-INSERT INTO `mydb`.`emprestimo` (`devolucao`, `dia_do_emprestimo`, `funcionario_idfuncionario`, `cliente_idcliente`, `livro_idlivro`)
-VALUES 
-('2024-12-01', CURRENT_TIMESTAMP, 4, 22, 8),
-('2024-12-05', CURRENT_TIMESTAMP, 3, 22, 9),
-('2024-12-10', CURRENT_TIMESTAMP, 2, 22, 10),
-('2024-12-15', CURRENT_TIMESTAMP, 1, 22, 11),
-('2024-12-20', CURRENT_TIMESTAMP, 4, 22, 12),
-('2024-12-22', CURRENT_TIMESTAMP, 2, 22, 13),
-('2024-12-25', CURRENT_TIMESTAMP, 3, 22, 14),
-('2024-12-30', CURRENT_TIMESTAMP, 1, 22, 15),
-('2025-01-02', CURRENT_TIMESTAMP, 4, 22, 16),
-('2025-01-05', CURRENT_TIMESTAMP, 2, 22, 17);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001201,CURRENT_TIMESTAMP,4,1,8);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001202,CURRENT_TIMESTAMP,1,4,7);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001203,CURRENT_TIMESTAMP,2,16,2);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001204,CURRENT_TIMESTAMP,5,1,7);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001205,CURRENT_TIMESTAMP,4,8,2);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001206,CURRENT_TIMESTAMP,3,4,5);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001207,CURRENT_TIMESTAMP,9,13,20);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001208,CURRENT_TIMESTAMP,8,12,16);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001209,CURRENT_TIMESTAMP,10,18,11);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001210,CURRENT_TIMESTAMP,11,6,10);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001211,CURRENT_TIMESTAMP,7,8,9);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001212,CURRENT_TIMESTAMP,6,10,11);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001213,CURRENT_TIMESTAMP,17,13,5);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001214,CURRENT_TIMESTAMP,14,2,13);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001215,CURRENT_TIMESTAMP,15,12,13);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001216,CURRENT_TIMESTAMP,9,12,13);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001217,CURRENT_TIMESTAMP,6,11,17);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001218,CURRENT_TIMESTAMP,18,5,2);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001219,CURRENT_TIMESTAMP,16,2,8);
-
-INSERT INTO emprestimo(devolucao,dia_do_emprestimo,funcionario_idfuncionario,cliente_idcliente,livro_idlivro)
-VALUES (20001220,CURRENT_TIMESTAMP,5,1,10);
+-- Inserindo dados na tabela `editora`
+INSERT INTO `mydb`.`editora` (`nome`, `localidade`) VALUES
+('Editora Alpha', 'São Paulo'),
+('Editora Beta', 'Rio de Janeiro'),
+('Editora Gamma', 'Belo Horizonte'),
+('Editora Delta', 'Curitiba'),
+('Editora Epsilon', 'Salvador'),
+('Editora Zeta', 'Porto Alegre'),
+('Editora Eta', 'Recife'),
+('Editora Theta', 'Brasília'),
+('Editora Iota', 'Fortaleza'),
+('Editora Kappa', 'Manaus');
+
+-- Inserindo dados na tabela `cliente`
+INSERT INTO `mydb`.`cliente` (`cpf`, `telefone`, `nome`, `data_de_nascimento`) VALUES
+('12345678901', '(11) 98765-4321', 'João Silva', '1985-05-15'),
+('23456789012', '(21) 97654-3210', 'Maria Oliveira', '1990-03-22'),
+('34567890123', '(31) 96543-2109', 'Carlos Santos', '1978-12-05'),
+('45678901234', '(41) 95432-1098', 'Ana Lima', '2000-07-09'),
+('56789012345', '(51) 94321-0987', 'Paulo Gonçalves', '1983-01-20'),
+('67890123456', '(71) 93210-9876', 'Carla Souza', '1995-09-13'),
+('78901234567', '(81) 92109-8765', 'Ricardo Alves', '1970-11-30'),
+('89012345678', '(61) 91098-7654', 'Fernanda Dias', '1988-06-25'),
+('90123456789', '(85) 90987-6543', 'Gabriel Rocha', '1992-04-17'),
+('01234567890', '(92) 89876-5432', 'Juliana Mendes', '1975-10-02');
+
+-- Inserindo dados na tabela `autor`
+INSERT INTO `mydb`.`autor` (`nome`, `nacionalidade`, `data_de_nascimento`) VALUES
+('Machado de Assis', 'Brasileiro', '1839-06-21'),
+('Clarice Lispector', 'Brasileira', '1920-12-10'),
+('Jorge Amado', 'Brasileiro', '1912-08-10'),
+('Paulo Coelho', 'Brasileiro', '1947-08-24'),
+('Cecília Meireles', 'Brasileira', '1901-11-07'),
+('Érico Veríssimo', 'Brasileiro', '1905-12-17'),
+('Rubem Fonseca', 'Brasileiro', '1925-05-11'),
+('Lygia Fagundes Telles', 'Brasileira', '1923-04-19'),
+('Manuel Bandeira', 'Brasileiro', '1886-04-19'),
+('Raquel de Queiroz', 'Brasileira', '1910-11-17');
+
+-- Inserindo dados na tabela `funcionario`
+INSERT INTO `mydb`.`funcionario` (`nome`, `cpf`, `salario`, `data_de_nascimento`, `telefone`) VALUES
+('José da Silva', '11122233344', 2500.00, '1990-01-01', '(11) 91234-5678'),
+('Ana Maria', '22233344455', 3000.00, '1985-02-15', '(21) 92345-6789'),
+('Carlos Pereira', '33344455566', 2800.00, '1992-03-20', '(31) 93456-7890'),
+('Mariana Souza', '44455566677', 3200.00, '1980-04-10', '(41) 94567-8901'),
+('Fernanda Costa', '55566677788', 2900.00, '1978-05-30', '(51) 95678-9012'),
+('Ricardo Alves', '66677788899', 3100.00, '1995-06-15', '(71) 96789-0123'),
+('Juliana Mendes', '77788899900', 2700.00, '1993-07-25', '(81) 97890-1234'),
+('Gabriel Rocha', '88899900011', 3400.00, '1987-08-05', '(61) 98901-2345'),
+('Luciana Lima', '99900011122', 3300.00, '1975-09-12', '(85) 99012-3456'),
+('Paulo Roberto', '00011122233', 2600.00, '1990-10-20', '(92) 90123-4567');
+
+-- Inserindo dados na tabela `livro`
+INSERT INTO `mydb`.`livro` (`genero`, `titulo`, `disponivel`, `idioma`, `data_de_publicacao`, `autor_idautor`, `editora_ideditora`) VALUES
+('Romance', 'Dom Casmurro', 1, 'Português', '1899', 1, 1),
+('Drama', 'A Hora da Estrela', 1, 'Português', '1977', 2, 2),
+('Ficção', 'Capitães da Areia', 1, 'Português', '1937', 3, 3),
+('Espiritualidade', 'O Alquimista', 1, 'Português', '1988', 4, 4),
+('Poesia', 'Romanceiro da Inconfidência', 1, 'Português', '1953', 5, 5),
+('Crônica', 'O Tempo e o Vento', 1, 'Português', '1949', 6, 6),
+('Contos', 'Feliz Ano Novo', 1, 'Português', '1975', 7, 7),
+('Memórias', 'Ciranda de Pedra', 1, 'Português', '1954', 8, 8),
+('Poesia', 'Libertinagem', 1, 'Português', '1930', 9, 9),
+('Romance', 'O Quinze', 1, 'Português', '1930', 10, 10);
+
+-- Inserindo dados na tabela `emprestimo`
+INSERT INTO `mydb`.`emprestimo` (`devolucao`, `dia_do_emprestimo`, `funcionario_idfuncionario`, `cliente_idcliente`, `livro_idlivro`) VALUES
+('2024-11-25', '2024-11-15 10:00:00', 1, 1, 1),
+('2024-11-26', '2024-11-16 11:00:00', 2, 2, 2),
+('2024-11-27', '2024-11-17 12:00:00', 3, 3, 3),
+('2024-11-28', '2024-11-18 13:00:00', 4, 4, 4),
+('2024-11-29', '2024-11-19 14:00:00', 5, 5, 5),
+('2024-11-30', '2024-11-20 15:00:00', 6, 6, 6),
+('2024-12-01', '2024-11-21 16:00:00', 7, 7, 7),
+('2024-12-02', '2024-11-22 17:00:00', 8, 8, 8),
+('2024-12-03', '2024-11-23 18:00:00', 9, 9, 9),
+('2024-12-04', '2024-11-24 19:00:00', 10, 10, 10);
