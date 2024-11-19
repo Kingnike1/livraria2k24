@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="form-container">
+        <p class="title">BEM VINDO A NOSSA LIVRARIA</p>
         <p class="title">Login</p>
         <form class="form" action="../controle/verificarlogin.php" method="post">
             <div class="input-group">
