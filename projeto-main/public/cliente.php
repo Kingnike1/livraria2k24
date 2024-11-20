@@ -45,72 +45,7 @@ if (isset($_GET['id'])) {
     <!-- Incluindo o Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Estilos adicionais para bordas e animações -->
-    <style>
-        .navbar {
-            border-bottom: 3px solid #007bff;
-        }
-
-        .form-control {
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            background-color: #f9f9f9;
-            border-radius: 8px;
-            padding: 20px;
-        }
-
-        .btn {
-            border-radius: 25px;
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .form-label {
-            font-weight: bold;
-            color: #333;
-        }
-
-        h1 {
-            color: #007bff;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .btn-submit {
-            background-color: #007bff;
-            color: white;
-            border-radius: 25px;
-            width: 100%;
-        }
-
-        .btn-submit:hover {
-            background-color: #0056b3;
-        }
-
-        .form-cadastro fieldset {
-            border: none;
-            margin-bottom: 15px;
-        }
-
-        .form-cadastro legend {
-            font-weight: bold;
-            color: #007bff;
-            font-size: 1.2rem;
-        }
-
-        .form-cadastro input {
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/cadastro.css">
 </head>
 
 <body>

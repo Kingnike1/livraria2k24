@@ -38,48 +38,8 @@ if (isset($_GET['id'])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Incluindo o Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <!-- Estilos adicionais -->
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            background-color: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .form-control {
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            border-radius: 25px;
-            width: 100%;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-        .btn-back {
-            color: #007bff;
-            font-size: 18px;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        .btn-back:hover {
-            text-decoration: underline;
-        }
-        h1 {
-            color: #007bff;
-            text-align: center;
-        }
-        .form-group label {
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/cadastro.css">
+
 </head>
 <body>
     <div class="container mt-4">

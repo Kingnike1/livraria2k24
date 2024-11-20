@@ -55,18 +55,19 @@ header h1 {
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--cor-primaria);
+    text-transform: uppercase;
     margin-bottom: 20px;
     border-bottom: 2px solid var(--cor-primaria);
     padding-bottom: 5px;
 }
 
-/* Links de Cadastro e Listagem */
+/* Links e Botões */
 a.letra {
     display: inline-block;
     margin: 10px 0;
@@ -119,7 +120,6 @@ a[href*="deslogar"]:hover {
     z-index: 1;
 }
 
-/* Estilo do título */
 .sidenav h3 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -129,13 +129,11 @@ a[href*="deslogar"]:hover {
     letter-spacing: 1px;
 }
 
-/* Estilo dos itens de navegação */
 .nav-item {
     list-style: none;
     margin-bottom: 15px;
 }
 
-/* Estilo para os links */
 .nav-link {
     display: block;
     padding: 12px;
@@ -146,25 +144,21 @@ a[href*="deslogar"]:hover {
     border-radius: 5px;
 }
 
-/* Efeito de hover nos links */
 .nav-link:hover {
     background-color: #495057;
     transform: translateX(10px);
 }
 
-/* Estilo dos sub-itens de navegação */
 .nav-item .nav-link {
     padding-left: 30px;
     font-size: 0.95rem;
 }
 
-/* Efeito de hover nos sub-itens */
 .nav-item .nav-link:hover {
     background-color: #6c757d;
     transform: translateX(15px);
 }
 
-/* Estilo das seções na barra lateral */
 .nav-item h5 {
     font-size: 1.2rem;
     font-weight: 600;
@@ -174,7 +168,6 @@ a[href*="deslogar"]:hover {
     text-transform: uppercase;
 }
 
-/* Adicionando ícones aos links */
 .nav-link i {
     margin-right: 10px;
     transition: transform 0.2s ease;
@@ -182,16 +175,6 @@ a[href*="deslogar"]:hover {
 
 .nav-link:hover i {
     transform: scale(1.2);
-}
-
-/* Rodapé da barra lateral */
-.sidenav .footer {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #adb5bd;
 }
 
 /* Botões adicionais na barra lateral */
@@ -213,21 +196,7 @@ a[href*="deslogar"]:hover {
     transform: scale(1.05);
 }
 
-/* Barra lateral fechada (se necessário) */
-.sidenav.closed {
-    width: 60px;
-    padding: 20px 10px;
-}
-
-.sidenav.closed .nav-item h5, .sidenav.closed .nav-link {
-    display: none;
-}
-
-.sidenav.closed .nav-item {
-    margin-bottom: 10px;
-}
-
-/* Efeito de animação para a sidebar */
+/* Animações */
 @keyframes slideIn {
     0% {
         transform: translateX(-250px);
@@ -254,6 +223,7 @@ a[href*="deslogar"]:hover {
 
     main {
         margin-top: 20px;
+        margin-left: 0;
     }
 
     a.letra {
@@ -269,66 +239,3 @@ a[href*="deslogar"]:hover {
         font-size: 1.5rem;
     }
 }
-
-/* Estilo dos botões */
-.button {
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s ease-in-out;
-    margin: 10px;
-}
-
-.button:hover::before {
-    left: 0;
-}
-
-.button:hover {
-    color: #fff;
-}
-
-.button a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease-in-out;
-}
-
-.button:hover a {
-    color: #fff;
-}
-
-.button {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.button:hover {
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Seções e outros estilos */
-main {
-    margin: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
-h2 {
-    color: #007BFF;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-

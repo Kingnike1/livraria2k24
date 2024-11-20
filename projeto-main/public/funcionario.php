@@ -46,43 +46,8 @@ if (isset($_GET['id'])) {
     <!-- Link do Bootstrap para melhorar o visual -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Estilos customizados -->
-    <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .form-control, .form-select {
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .btn-submit {
-            background-color: #007bff;
-            border: none;
-            border-radius: 25px;
-            width: 100%;
-        }
-        .btn-submit:hover {
-            background-color: #0056b3;
-        }
-        h1 {
-            color: #007bff;
-            text-align: center;
-        }
-        .btn-back {
-            color: #007bff;
-            font-size: 18px;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        .btn-back:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/cadastro.css">
+
 </head>
 <body>
     <div class="container mt-4">

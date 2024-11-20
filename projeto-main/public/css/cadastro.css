@@ -1,178 +1,107 @@
-/* Reset Básico */
-*,
-*::before,
-*::after {
+/* Estilo global */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilo para o corpo da página */
 body {
     font-family: 'Arial', sans-serif;
     font-size: 16px;
-    background-color: #f4f7fc; /* Cor suave */
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Fundo gradiente */
     color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 10px;
+    padding: 20px;
 }
 
-/* Estrutura Principal */
-main, form {
+/* Estilo do contêiner */
+.container {
     background-color: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
     width: 100%;
-    max-width: 800px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Estilo para os títulos */
+/* Animação de fade */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
 h1 {
-    font-size: 2.5rem; /* Aumentado para melhor destaque */
+    font-size: 2rem;
+    color: #2193b0;
     text-align: center;
-    color: #4CAF50; /* Cor de destaque */
-    margin-bottom: 30px;
-}
-
-/* Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Estilos de Fieldset e Legend */
-fieldset {
-    border: 1px solid #ddd;
-    padding: 15px 20px;
-    border-radius: 8px;
     margin-bottom: 20px;
+    border-bottom: 2px solid #6dd5ed;
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-legend {
+/* Labels */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: #444;
+}
+
+/* Inputs */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #2193b0;
+    box-shadow: 0 0 8px rgba(33, 147, 176, 0.2);
+    outline: none;
+}
+
+/* Botão */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #0056b3;
-    margin-bottom: 10px;
-}
-
-/* Estilos para Labels */
-label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-/* Campos de Input e Select */
-input[type="text"],
-input[type="date"],
-input[type="number"],
-select,
-.input, .form-control {
-    width: 100%;
-    padding: 12px; /* Aumento no padding para melhor usabilidade */
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-/* Estilo para campos de texto focados */
-input[type="text"]:focus,
-input[type="date"]:focus,
-input[type="number"]:focus,
-select:focus,
-.input:focus, .form-control:focus {
-    outline: 2px solid #0056b3;
-    outline-offset: 2px;
-    border-color: #0056b3;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-}
-
-/* Estilo do botão */
-button, input[type="submit"], .btn-submit, .btn {
-    background-color: #007BFF;
-    color: white;
-    padding: 12px;
-    font-size: 1.1rem;
+    color: #fff;
+    background-color: #2193b0;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     width: 100%;
-    font-weight: bold;
 }
 
-/* Efeitos de Hover e Active no botão */
-button:hover, input[type="submit"]:hover, .btn:hover, .btn-submit:hover {
-    background-color: #0056b3;
-    transform: scale(1.02);
+.btn i {
+    margin-right: 8px;
 }
 
-button:active, input[type="submit"]:active, .btn-submit:active, .btn:active {
+.btn:hover {
+    background-color: #176f7e;
+    transform: translateY(-3px);
+}
+
+.btn:active {
     transform: scale(0.98);
-}
-
-input[type="submit"]:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-    main, form {
-        padding: 15px 20px;
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 2rem; /* Ajustado para telas menores */
-    }
-
-    legend {
-        font-size: 1rem;
-    }
-
-    label, input, select, button {
-        font-size: 0.9rem;
-    }
-
-    button, input[type="submit"], .btn-submit, .btn {
-        min-height: 40px;
-    }
-}
-
-/* Estilos para campos desabilitados */
-input:disabled,
-select:disabled {
-    background-color: #f5f5f5;
-    border-color: #ddd;
-    cursor: not-allowed;
-}
-
-/* Variáveis CSS */
-:root {
-    --primary-color: #007BFF;
-    --secondary-color: #0056b3;
-    --highlight-color: #4CAF50;
-    --background-color: #f4f7fc;
-    --text-color: #333;
-    --border-color: #ccc;
-    --input-background: #fff;
-}
-
-/* Otimização de imagens no fundo (se houver) */
-body {
-    background-image: url('path/to/your/image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
